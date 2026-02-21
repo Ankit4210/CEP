@@ -2,8 +2,87 @@
 <html>
 <head>
     <title>Civic Sense System</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #2193b0, #6dd5ed);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .container {
+            margin: 40px 0;
+        }
+
+        button {
+            background: white;
+            color: #2193b0;
+            border: none;
+            padding: 15px 30px;
+            margin: 15px;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            background: #0f2027;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .features {
+            background: white;
+            color: black;
+            padding: 50px 20px;
+        }
+
+        .feature-box {
+            display: inline-block;
+            width: 250px;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #0f2027;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        @media(max-width: 600px){
+            header h1 {
+                font-size: 28px;
+            }
+
+            button {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
@@ -14,12 +93,31 @@
 
 <div class="container">
     <button onclick="window.location.href='report.html'">
-        Report Violation
+        🚨 Report Violation
     </button>
 
     <button onclick="window.location.href='view.html'">
-        View Violations
+        📋 View Violations
     </button>
+</div>
+
+<div class="features">
+    <h2>Why Use Our System?</h2>
+
+    <div class="feature-box">
+        <h3>✔ Easy Reporting</h3>
+        <p>Quickly report violations with simple steps.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>✔ Transparency</h3>
+        <p>View all reported cases in one place.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>✔ Community Growth</h3>
+        <p>Encourage responsible citizen behavior.</p>
+    </div>
 </div>
 
 <footer>
