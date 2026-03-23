@@ -2,27 +2,48 @@
 <html>
 <head>
     <title>Report Violation</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <h2>Submit Violation Report</h2>
 
-<form id="reportForm">
+<form id="reportForm" onsubmit="return handleForm()">
+    
     <input type="text" id="name" placeholder="Your Name" required>
-    <input type="text" id="location" placeholder="Location" required>
-    <textarea id="description" placeholder="Describe the violation..." required></textarea>
+    <br><br>
 
-    <input type="number" id="fine" placeholder="Fine Amount (₹)" required>
+    <input type="text" id="location" placeholder="Location" required>
+    <br><br>
+
+    <textarea id="description" placeholder="Describe the violation..." required></textarea>
+    <br><br>
+
+    <!-- ✅ required hata diya -->
+    <input type="number" id="fine" placeholder="Fine Amount (optional)" min="0">
+    <br><br>
 
     <input type="file" id="photoUpload" accept="image/*">
+    <br><br>
 
     <button type="submit">Submit</button>
+
 </form>
 
 <br>
 <button onclick="window.location.href='index.html'">Back to Home</button>
 
-<script src="script.js"></script>
+<script>
+function handleForm() {
+    let fine = document.getElementById("fine");
+
+    // Agar blank hai to 0 set karo
+    if (fine.value === "") {
+        fine.value = 0;
+    }
+
+    return true;
+}
+</script>
+
 </body>
 </html>
